@@ -1,0 +1,17 @@
+CC=g++
+
+CFLAGS=-c -Wextra -Wall -Wpedantic 
+
+all: LIST
+
+LIST: MainList.o FuncLIST.o  
+	$(CC) MainList.o FuncLIST.o -o LIST
+
+MainList.o: MainList.cpp
+	$(CC) $(CFLAGS) MainList.cpp
+
+FuncLIST.o: FuncLIST.cpp
+	$(CC) $(CFLAGS) FuncLIST.cpp
+
+clean:
+	rm -rf *.o LIST
