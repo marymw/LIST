@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	char c = -1;
-	printf("%d\n", c);
+	int c = 3738381229;
+	printf("%d \t %x\n", c, c);
 	return 0;
 }
